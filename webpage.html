@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Health Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #0f1f3d, #12204e);
+            color: #fff; /* Text color */
+        }
+        h1 {
+            text-align: center;
+        }
+        section {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 40px; /* Increased margin between sections */
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background for sections */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        #scaleContainer {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #scale {
+            width: 100%;
+            height: 30px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-top: 20px;
+            position: relative;
+            background: linear-gradient(to right, #ff5252 0%, #ffc107 50%, #4caf50 100%);
+        }
+        #indicator {
+            width: 10px;
+            height: 40px;
+            background-color: #007bff;
+            position: absolute;
+            top: -5px;
+            border-radius: 5px;
+        }
+        #labelContainer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        #labelContainer span {
+            font-size: 12px;
+            color: #666;
+        }
+        /* Adjustments for mobile screens */
+        @media only screen and (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
+            input[type="radio"] {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        #score {
+            text-align: center;
+            margin-top: 40px;
+            color: #fff; /* Text color */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="background-color:#FFFFFF; padding: 15px; text-align: left;">
+    <img src="https://epsilonmoney.com/wp-content/uploads/logo-full-dark.png" alt="Company Logo" style="width: 150px; height: auto; margin-right: 20px;">
+        
+    </div>
+</div>
+
+</header>
+
+<h1>Financial Health Survey</h1>
+
+<section id="spend">
+    <h2>Section: SPEND</h2>
+    <div>
+        <label for="q1">1. Which of the following statements best describes how your household’s total spending compared to total income, over the last 12 months?</label>
+        <br>
+        <input type="radio" name="spend_q1" value="100"> Spending was much less than income<br>
+        <input type="radio" name="spend_q1" value="75"> Spending was a little less than income<br>
+        <input type="radio" name="spend_q1" value="50"> Spending was about equal to income<br>
+        <input type="radio" name="spend_q1" value="25"> Spending was a little more than income<br>
+        <input type="radio" name="spend_q1" value="0"> Spending was much more than income<br>
+    </div>
+<br>
+<br>
+    <div>
+        <label for="q2">2. Which of the following statements best describes how your household has paid its bills over the last 12 months?</label>
+        <br>
+        <input type="radio" name="spend_q2" value="100"> Pay all of our bills on time<br>
+        <input type="radio" name="spend_q2" value="60"> Pay nearly all of our bills on time<br>
+        <input type="radio" name="spend_q2" value="40"> Pay most of our bills on time<br>
+        <input type="radio" name="spend_q2" value="20"> Pay some of our bills on time<br>
+        <input type="radio" name="spend_q2" value="0"> Pay very few of our bills on time<br>
+    </div>
+</section>
+
+<section id="save">
+    <h2>Section: SAVE</h2>
+    <div>
+        <label for="q3">3. At your current level of spending, how long could you and your household afford to cover expenses, if you had to live on only the money you have readily available, without withdrawing money from retirement accounts or borrowing?</label>
+        <br>
+        <input type="radio" name="save_q1" value="100">  6 months or more<br>
+        <input type="radio" name="save_q1" value="75"> 3-5 months<br>
+        <input type="radio" name="save_q1" value="50">  1-2 months<br>
+        <input type="radio" name="save_q1" value="25">   1-3 weeks<br>
+        <input type="radio" name="save_q1" value="0">   Less than 1 week<br>
+    </div>
+<br>
+<br>
+    <div>
+        <label for="q4">4. Thinking about your household’s longer-term financial goals, how confident are you that your household is currently doing what is needed to meet your longer-term goals?</label>
+        <br>
+        <input type="radio" name="save_q2" value="100"> Very confident<br>
+        <input type="radio" name="save_q2" value="75"> Moderately confident<br>
+        <input type="radio" name="save_q2" value="50"> Somewhat confident<br>
+        <input type="radio" name="save_q2" value="25"> Slightly confident<br>
+        <input type="radio" name="save_q2" value="0"> Not at all confident<br>
+    </div>
+</section>
+
+<section id="borrow">
+    <h2>Section: BORROW</h2>
+    <div>
+        <label for="q5">5. Thinking about all of your household’s current debts, which of the following statements describes how manageable your household debt is?</label>
+        <br>
+        <input type="radio" name="borrow_q1" value="100">  Do not have any debt<br>
+        <input type="radio" name="borrow_q1" value="85"> Have a manageable amount of debt<br>
+        <input type="radio" name="borrow_q1" value="40"> Have a bit more debt than is manageable<br>
+        <input type="radio" name="borrow_q1" value="0"> Have far more debt than is manageable<br>
+    </div>
+<br>
+<br>
+    <div>
+        <label for="q6">6. How would you rate your credit score?</label>
+        <br>
+        <input type="radio" name="borrow_q2" value="100"> Excellent<br>
+        <input type="radio" name="borrow_q2" value="60"> Very good<br>
+        <input type="radio" name="borrow_q2" value="40"> Good<br>
+        <input type="radio" name="borrow_q2" value="20">  Fair<br>
+        <input type="radio" name="borrow_q2" value="0"> Poor<br>
+    </div>
+</section>
+
+<section id="plan">
+    <h2>Section: PLAN</h2>
+    <div>
+        <label for="q7">7. Thinking about all of the types of insurance you and others in your household currently might have, how confident are you that those insurance policies will provide enough support in case of an emergency?</label>
+        <br>
+        <input type="radio" name="plan_q1" value="100">  Very confident<br>
+        <input type="radio" name="plan_q1" value="75"> Moderately confident<br>
+        <input type="radio" name="plan_q1" value="50"> Somewhat confident<br>
+        <input type="radio" name="plan_q1" value="25">   Slightly confident<br>
+        <input type="radio" name="plan_q1" value="0">  Not at all confident<br>
+        <input type="radio" name="plan_q1" value="0">  No one in my household  has any insurance<br>
+    </div>
+<br>
+<br>
+    <div>
+        <label for="q8">8. To what extent do you agree or disagree with the following statement: “My household plans ahead financially.”</label>
+        <br>
+        <input type="radio" name="plan_q2" value="100">  Agree strongly<br>
+        <input type="radio" name="plan_q2" value="65"> Agree somewhat<br>
+        <input type="radio" name="plan_q2" value="35">  Neither agree nor disagree<br>
+        <input type="radio" name="plan_q2" value="15">  Disagree somewhat<br>
+        <input type="radio" name="plan_q2" value="0">   Disagree strongly<br>
+    </div>
+</section>
+
+<button onclick="calculateScore()" style="display: block; margin: 0 auto; font-size: 18px;">Calculate Score</button>
+
+<div id="scaleContainer">
+    <div id="scale">
+        <div id="indicator"></div>
+    </div>
+    <div id="labelContainer">
+        <span>Financially Vulnerable</span>
+        <span>Financially Coping</span>
+        <span>Financially Healthy</span>
+    </div>
+</div>
+
+<div id="score">Score: <span id="scoreValue">0</span></div>
+
+<script>
+    function calculateScore() {
+        let score = 0;
+        const questions = document.querySelectorAll('input[type="radio"]:checked');
+        questions.forEach(question => {
+            score += parseInt(question.value);
+        });
+
+        // Update the position of the indicator based on the score
+        const indicator = document.getElementById('indicator');
+        const scaleWidth = document.getElementById('scale').offsetWidth;
+        const maxScore = 800; // Assuming maximum possible score is 800
+        const newPosition = (score / maxScore) * scaleWidth;
+        indicator.style.left = newPosition + 'px';
+
+        // Display score at the bottom
+        const scoreValue = document.getElementById('scoreValue');
+        scoreValue.textContent = score/8;
+    }
+</script>
+
+</body>
+</html>
